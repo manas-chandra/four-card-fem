@@ -1,0 +1,91 @@
+@import "fonts";
+@import "color";
+@import "global";
+
+header {
+  margin: 50px auto;
+  max-width: 500px;
+  text-align: center;
+}
+
+h1 {
+  font-weight: 200;
+	margin: 0;
+}
+
+h1 span {
+  font-weight: 600;
+  display: block;
+}
+
+p {
+  color: $paragraph-color;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1140px;
+}
+
+.box {
+  background-color: #fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05), 0 6px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 30px;
+  margin: 15px;
+  width: 350px;
+  position: relative;
+  overflow: hidden;
+}
+
+.box::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  height: 5px;
+  width: 100%;
+}
+
+.box h2 {
+  margin: 0;
+}
+
+.box img {
+  display: block;
+  margin-left: auto;
+}
+
+.box p {
+  font-size: 14px;
+  margin: 15px 0 30px;
+}
+
+.box-blue::after {
+  background-color: $box-blue;
+}
+
+.box-red::after {
+  background-color: $box-red;
+}
+
+.box-cyan::after {
+  background-color: $box-cyan;
+}
+
+.box-orange::after {
+  background-color: $box-orange;
+}
+
+.box-align {
+  transform: translateY(50%);
+}
+
+@media (max-width: 775px) {
+  .box-align {
+    transform: translateY(0);
+  }
+}
